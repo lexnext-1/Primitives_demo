@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primitives.StartApp", "Primitives.StartApp\Primitives.StartApp.csproj", "{063C5B9A-BFE8-4BE3-B9A3-31519C87C368}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primitives.Common", "Primitives.Common\Primitives.Common.csproj", "{3A9A0054-EBAF-4367-ABF8-C9CAEFC1BFF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primitives.Benchmark", "Primitives.Benchmark\Primitives.Benchmark.csproj", "{531E6FC5-18E1-470C-BF82-8A74EE1269F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{063C5B9A-BFE8-4BE3-B9A3-31519C87C368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{063C5B9A-BFE8-4BE3-B9A3-31519C87C368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{063C5B9A-BFE8-4BE3-B9A3-31519C87C368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{063C5B9A-BFE8-4BE3-B9A3-31519C87C368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A9A0054-EBAF-4367-ABF8-C9CAEFC1BFF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A9A0054-EBAF-4367-ABF8-C9CAEFC1BFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A9A0054-EBAF-4367-ABF8-C9CAEFC1BFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A9A0054-EBAF-4367-ABF8-C9CAEFC1BFF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{531E6FC5-18E1-470C-BF82-8A74EE1269F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{531E6FC5-18E1-470C-BF82-8A74EE1269F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{531E6FC5-18E1-470C-BF82-8A74EE1269F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{531E6FC5-18E1-470C-BF82-8A74EE1269F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
