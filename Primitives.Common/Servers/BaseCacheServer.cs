@@ -14,7 +14,18 @@ public abstract class BaseCacheServer
         =>  await Task.FromResult<IEnumerable<CacheModel>>(Data);
     
     
-    public virtual async Task<bool> NoSafetyAddData(CacheModel model)
+    public virtual bool NoSafetyAddData(CacheModel model)
+    {
+        if (Data.All(p => p.Id != model.Id))
+        {
+            Data.Add(model);
+            return true;
+        }
+
+        return false;
+    }
+    
+    public virtual async Task<bool> NoSafetyAddDataAsync(CacheModel model)
     {
         if (Data.All(p => p.Id != model.Id))
         {

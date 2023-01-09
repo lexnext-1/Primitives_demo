@@ -11,7 +11,7 @@ public class SemaphoreSlimServer : BaseCacheServer, ICacheServerPrimitive
         await _semaphore.WaitAsync();
 
 
-         await NoSafetyAddData(model);
+         await NoSafetyAddDataAsync(model);
 
 
         _semaphore.Release();

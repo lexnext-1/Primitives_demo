@@ -14,7 +14,7 @@ public class MonitorServer : BaseCacheServer, ICacheServerPrimitive
         try
         {
           
-            NoSafetyAddData(model).Wait();
+            NoSafetyAddData(model);
         }
         catch (ArgumentException ex)
         {

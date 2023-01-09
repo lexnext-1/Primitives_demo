@@ -11,7 +11,7 @@ public class SpinLockServer : BaseCacheServer, ICacheServerPrimitive
         try
         {
             _spinlock.Enter(ref isLocked);
-             NoSafetyAddData(model).Wait();
+             NoSafetyAddData(model);
         }
         finally
         {
