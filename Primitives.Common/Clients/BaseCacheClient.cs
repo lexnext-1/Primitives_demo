@@ -40,4 +40,19 @@ public abstract class BaseCacheClient
 
         return await Task.FromResult(dataSet);
     }
+    
+    protected virtual async Task<CacheModel[][]> InitDataset_90Percent()
+    {
+        CacheModel[][] dataSet = new CacheModel[CountOfParalles][];
+
+        for (var i = 0; i < CountOfParalles; i++)
+        {
+            var temp = i == 0
+                ? Enumerable.Range(0, CountInArray).ToArray()
+                : Enumerable.Range(CountInArray * i - CountInArray*i *9/ 10, CountInArray).ToArray();
+            dataSet[i] = temp.ToList().Select(p=>new CacheModel(){Id=p}).ToArray();
+        }
+
+        return await Task.FromResult(dataSet);
+    }
 }
