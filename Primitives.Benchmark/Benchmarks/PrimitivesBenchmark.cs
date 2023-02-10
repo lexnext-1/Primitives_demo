@@ -10,16 +10,17 @@ namespace Primitives.Benchmark.Benchmarks;
 public class PrimitivesBenchmark
 {
 
-    private  int _countOfParalles;
-    private  int _countInArray; 
+    [Params(10,20)]
+    public  int CountOfParalles;
+    [Params(1000,2000)]
+    public  int CountInArray; 
   
     
     
     [GlobalSetup]
     public void Setup()
     {
-        _countInArray = 2000;
-        _countOfParalles = 10;
+   
     }
         
     [Benchmark]
@@ -27,7 +28,7 @@ public class PrimitivesBenchmark
     public async Task  Semaphore()
     {
         var semaphoreServer = new MonitorServer();
-        var semaphoreClient = new PararallelClient(semaphoreServer, _countOfParalles, _countInArray);
+        var semaphoreClient = new PararallelClient(semaphoreServer, CountOfParalles, CountInArray);
         await semaphoreClient.SendValues();
     }
     
@@ -35,7 +36,7 @@ public class PrimitivesBenchmark
     public async Task Monitor()
     {
         var monitorServer = new MonitorServer();
-        var monitorClient = new PararallelClient(monitorServer, _countOfParalles, _countInArray);
+        var monitorClient = new PararallelClient(monitorServer, CountOfParalles, CountInArray);
         await monitorClient.SendValues();
     }
     
@@ -44,7 +45,7 @@ public class PrimitivesBenchmark
     public async Task SpinLock()
     {
         var server = new SpinLockServer();
-        var client = new PararallelClient(server, _countOfParalles, _countInArray);
+        var client = new PararallelClient(server, CountOfParalles, CountInArray);
         await client.SendValues();
     }
     
